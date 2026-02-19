@@ -55,30 +55,30 @@ Automated end-to-end tests were implemented using **Playwright** to validate a c
 ```bash
 npm install
 
-2️⃣ Create .env file in project root
+2️⃣** Create .env file in project root**
 
 RT_EMAIL=your_test_email
 RT_PASSWORD=your_test_password
 
-3️⃣ Install Playwrighт browsers
+3️⃣** Install Playwrighт browsers**
 
 npx playwright install
 
-Running Tests
+**Running Tests**
 
-Run all tests
+**Run all tests**
 npx playwright test
 
-Run Chromium only
+**Run Chromium only**
 npx playwright test --project=chromium
 
-Run with visible browser
+**Run with visible browser**
 npx playwright test --project=chromium --headed
 
-View HTML report
+**View HTML report**
 npx playwright show-report
 
-Stability Considerations
+**Stability Considerations**
 
 The Roadtrippers UI may display overlays (cookie consent, promotional modals) that can block interactions.
 
@@ -94,7 +94,7 @@ To ensure reliability, the test suite:
 
 This approach keeps the business flow deterministic.
 
-Part 2 — Manual Test Plan
+**Part 2 — Manual Test Plan**
 
 A comprehensive test plan was created for the Trip Sharing feature.
 
@@ -115,7 +115,7 @@ cross-browser & responsive behavior
 
 accessibility baseline
 
-Part 3 — Bug Reports & Communication
+**Part 3 — Bug Reports & Communication**
 
 Documented reproducible issues discovered during testing.
 
@@ -132,7 +132,7 @@ Overlays blocking critical user actions
 
 Includes a professional summary and an engineering communication email.
 
-Part 4 — CI/CD (Bonus)
+**Part 4 — CI/CD (Bonus)**
 
 Includes a sample CI setup to run automated tests on pull requests.
 
@@ -146,7 +146,7 @@ Technology Stack
 
 - dotenv
 
-How to Review Quickly
+**How to Review Quickly**
 
 1. Read the test plan:
 part2-test-plan/TEST-PLAN.md
