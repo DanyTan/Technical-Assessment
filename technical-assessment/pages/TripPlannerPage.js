@@ -11,7 +11,7 @@ class TripPlannerPage {
     this.itineraryBtn = this.page.getByRole('button', { name: /itinerary/i });
     this.createATripBtn = this.page.getByRole('button', { name: /create a trip/i });
 
-    this.starting = this.page.getByRole('textbox', { name: /starting point/i });
+    this.startingPoint = this.page.getByRole('textbox', { name: /starting point/i });
     this.destination = this.page.getByRole('textbox', { name: /destination/i });
 
     this.createTripBtn = this.page.getByRole('button', { name: /^create trip$/i });
@@ -26,7 +26,7 @@ class TripPlannerPage {
   }
 
   async openCreateTrip() {
-    await expect(this.itineraryBtn).toBeVisible({ timeout: 40000 });
+    await expect(this.itineraryBtn).toBeVisible();
     await safeClick(this.itineraryBtn, this.page, 20000);
 
     await expect(this.createATripBtn).toBeVisible({ timeout: 40000 });
@@ -34,19 +34,19 @@ class TripPlannerPage {
   }
 
   async fillRoute(startCity, endCity) {
-    await expect(this.starting).toBeVisible({ timeout: 40000 });
-    await this.starting.click({ timeout: 10000 });
-    await this.starting.fill(startCity);
+    await expect(this.startingPoint).toBeVisible({ timeout: 40000 });
+    await this.startingPoint.click({ timeout: 10000 });
+    await this.startingPoint.fill(startCity);
     await this.page.waitForTimeout(400);
-    await this.starting.press('ArrowDown');
-    await this.starting.press('Enter');
+    await this.startingPoint.press('ArrowDown');
+    await this.startingPoint.press('Enter');
 
     await expect(this.destination).toBeVisible({ timeout: 40000 });
     await this.destination.click({ timeout: 10000, force: true });
     await this.destination.fill(endCity);
-await this.page.waitForTimeout(400);
-await this.destination.press('ArrowDown');
-await this.destination.press('Enter');
+    await this.page.waitForTimeout(400);
+    await this.destination.press('ArrowDown');
+    await this.destination.press('Enter');
     await this.page.waitForTimeout(400);
 
     // option if present, otherwise Enter
