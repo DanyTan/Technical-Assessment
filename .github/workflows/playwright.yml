@@ -25,7 +25,8 @@ jobs:
       run: npx playwright install --with-deps
 
     - name: Run Playwright tests
-      run: npx playwright test
+      run: npx playwright test --project=chromium
+
       env:
         RT_EMAIL: ${{ secrets.RT_EMAIL }}
         RT_PASSWORD: ${{ secrets.RT_PASSWORD }}
