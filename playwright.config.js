@@ -7,7 +7,7 @@ const path = require('path');
 dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 module.exports = defineConfig({
-  testDir: './technical-assessment',
+  testDir: './part1-automation',
   timeout: 30 *1000,
    expect : {
     timeout: 5000
