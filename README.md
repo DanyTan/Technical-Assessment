@@ -158,4 +158,4 @@ part3-bug-reports/
 npx playwright test --project=chromium
 
 4. View report:
-npx playwright show-report 
+npx playwright show-report
