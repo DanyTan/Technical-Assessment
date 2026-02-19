@@ -153,7 +153,7 @@ Validate that users can share trip itineraries through supported channels (Faceb
 | TC-F-04 | Share via Facebook opens dialog with correct URL | P1 | F |
 | TC-F-05 | Share via X opens compose with correct URL | P1 | F |
 
-### TC-F-02 (Detailed)
+### TC-F-02
 **Preconditions:** A1 logged-in, trip T1 exists, privacy=Public  
 **Steps:**
 1. Open T1 itinerary
@@ -165,7 +165,7 @@ Validate that users can share trip itineraries through supported channels (Faceb
 - Itinerary content is visible
 - URL format is consistent (token/slug) and stable
 
-### TC-F-03 (Detailed)
+### TC-F-03
 **Preconditions:** A1 logged-in, trip exists  
 **Steps:**
 1. Open trip itinerary
@@ -190,7 +190,7 @@ Validate that users can share trip itineraries through supported channels (Faceb
 | TC-S-06 | Revocation invalidates previously issued links | P0 | S |
 | TC-S-07 | Trip deletion results in Not Found for link | P1 | S |
 
-### TC-S-05 (Detailed)
+### TC-S-05
 **Preconditions:** A1 logged-in, trip is Public, share link exists  
 **Steps:**
 1. Copy share link while trip is Public
@@ -202,7 +202,7 @@ Validate that users can share trip itineraries through supported channels (Faceb
 - No itinerary content visible
 - No partial content leakage (title, waypoints) beyond minimal error page
 
-### TC-S-06 (Detailed)
+### TC-S-06
 **Preconditions:** A1 logged-in, link generated  
 **Steps:**
 1. Copy share link
@@ -215,14 +215,14 @@ Validate that users can share trip itineraries through supported channels (Faceb
 
 ---
 
-## 9.3 Social Preview / Leak Checks (Senior add-on)
+## 9.3 Social Preview / Leak Checks
 | ID | Title | Priority | Type |
 |---|---|---|---|
 | TC-S-08 | Private trip does not unfurl/share preview metadata | P0 | S |
 | TC-S-09 | Public trip unfurl shows correct title/thumbnail (if expected) | P2 | UX |
 | TC-S-10 | Ensure share URL does not contain sensitive data in query params | P0 | S |
 
-**TC-S-10 Steps (quick):**
+**TC-S-10 Steps:**
 1. Generate link (any privacy)
 2. Inspect URL query params/token
 3. Confirm no raw PII, email, internal IDs, or session identifiers included
@@ -248,7 +248,7 @@ Validate that users can share trip itineraries through supported channels (Faceb
 
 ---
 
-## 9.6 Accessibility Baseline (Quick)
+## 9.6 Accessibility Baseline 
 | ID | Title | Priority | Type |
 |---|---|---|---|
 | TC-A-01 | Share controls reachable by keyboard (Tab order) | P2 | UX |

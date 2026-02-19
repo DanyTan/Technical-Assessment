@@ -49,7 +49,6 @@ class TripPlannerPage {
     await this.destination.press('Enter');
     await this.page.waitForTimeout(400);
 
-    // option if present, otherwise Enter
     const option = this.page.getByRole('button', { name: new RegExp(endCity, 'i') }).first();
     if (await option.isVisible({ timeout: 2500 }).catch(() => false)) {
       await option.click({ timeout: 10000 });

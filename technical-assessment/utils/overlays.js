@@ -17,7 +17,7 @@ async function closeOverlays(page) {
     await onetrustClose.click({ timeout: 1500 }).catch(() => {});
   }
 
-  // Promo modal in iframe (V-Day / Access Deal)
+  // Promo modal in iframe (V-Day)
   try {
     const frame = page.frameLocator('iframe');
     const promoText = frame.locator('text=/v-day|flash sale|access deal|50%\\s*off/i').first();
@@ -26,7 +26,7 @@ async function closeOverlays(page) {
       await page.keyboard.press('Escape').catch(() => {});
     }
   } catch (_) {
-    // ignore
+    
   }
 
   // Close popup (if present)

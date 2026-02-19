@@ -31,7 +31,6 @@ test.describe('Trip planning flow', () => {
 
     const startCity = randomCity();
     const endCity = randomCity(startCity);
-    // console.log(`TC1 Trip: ${startCity} -> ${endCity}`);
 
     await tripPlannerPage.fillRoute(startCity, endCity);
     await tripPlannerPage.submitTrip();
@@ -44,7 +43,6 @@ test.describe('Trip planning flow', () => {
     await tripPlannerPage.openCreateTrip();
 
     const city = randomCity();
-    //console.log(`TC2 Trip: ${city} -> ${city}`);
 
     await tripPlannerPage.fillRoute(city, city);
 
