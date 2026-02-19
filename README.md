@@ -1,4 +1,4 @@
-# QA Engineer Technical Assessment — Roadpass Digital
+# QA Engineer Technical Assessment - Roadpass Digital
 
 This repository contains my submission for the QA Engineer technical assessment.
 
@@ -51,16 +51,16 @@ Automated end-to-end tests were implemented using **Playwright** to validate a c
 
 ## Setup
 
-### 1️⃣ Install dependencies
+### 1️ Install dependencies
 ```bash
 npm install
 
-2️⃣** Create .env file in project root**
+2️** Create .env file in project root**
 
 RT_EMAIL=your_test_email
 RT_PASSWORD=your_test_password
 
-3️⃣** Install Playwrighт browsers**
+3️** Install Playwrighт browsers**
 
 npx playwright install
 
