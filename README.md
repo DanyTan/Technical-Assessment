@@ -51,7 +51,6 @@ Automated end-to-end tests were implemented using **Playwright** to validate a c
 
 ## Setup
 
-### 1️ Install dependencies
 ```bash
 npm install
 
